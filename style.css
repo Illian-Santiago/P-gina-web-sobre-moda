@@ -33,7 +33,6 @@ nav a:hover {
     padding: 2rem;
 }
 
-/* Página principal */
 .main-page {
     text-align: center;
 }
@@ -52,7 +51,6 @@ nav a:hover {
     background-color: #666;
 }
 
-/* Página 1 - Tendencias */
 .tendencias {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -75,7 +73,6 @@ nav a:hover {
     }
 }
 
-/* Página 2 - Diseñadores */
 .diseñadores img {
     width: 100%;
     border-radius: 10px;
@@ -91,7 +88,6 @@ nav a:hover {
     margin-top: 1rem;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     header {
         font-size: 1.5rem;
@@ -100,4 +96,49 @@ nav a:hover {
     nav a {
         font-size: 1rem;
     }
+}
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.presentacion img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.destacados {
+    padding: 2rem;
+}
+
+.destacados h3 {
+    margin-top: 0;
+}
+
+.destacados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.destacados li {
+    margin-bottom: 1rem;
+}
+
+.destacados a {
+    text-decoration: none;
+    color: #333;
+}
+
+.destacados a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    width: 1000px;
+    height: 800px;
 }

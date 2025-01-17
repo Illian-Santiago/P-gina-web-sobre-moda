@@ -2,14 +2,27 @@ const main = document.querySelector('main');
 const btnMain = document.querySelector('#main');
 const btnDiseniadores = document.querySelector('#diseniadores');
 const btnTendencias = document.querySelector('#tendencias');
+let paginaElegida;
 const paginas = {
     main:
         `
-        <section class="main-page">
-            <h2>Bienvenido al mundo de la moda</h2>
-            <p>Descubre las últimas tendencias y a los diseñadores más influyentes.</p>
-            <button onclick="showPage('tendencias')">Explorar Tendencias</button>
-        </section>
+<section class="main-page">
+    <h2>Bienvenido al mundo de la moda</h2>
+    <p>Descubre las últimas tendencias y a los diseñadores más influyentes en el mundo de la moda.</p>
+    <div class="presentacion">
+        <img src="/imagen_moda.jpeg" alt="Imagen de moda" width="40" height="300">
+        <p>La moda es una forma de expresión y creatividad que refleja la personalidad y el estilo de cada individuo. En este sitio, te presentamos las últimas tendencias y a los diseñadores más influyentes en la industria.</p>
+    </div>
+    <div class="destacados">
+        <h3>Destacados de la semana</h3>
+        <ul>
+            <li><a href="#">Tendencia de la semana: Colores vibrantes</a></li>
+            <li><a href="#">Diseñador del mes: Juan Pérez</a></li>
+            <li><a href="#">Evento de moda: Semana de la moda en Nueva York</a></li>
+        </ul>
+    </div>
+    <button onclick="cambiarPagina('tendencias')">Explorar Tendencias</button>
+</section>
         `,
     tendencias:
         `
@@ -19,15 +32,7 @@ const paginas = {
         `,
     diseniadores:
         `
-        <div>
-            <img src="https://via.placeholder.com/300" alt="Diseñador 1">
-            <p>Diseñador 1</p>
-        </div>
-
-        <div>
-            <img src="https://via.placeholder.com/300" alt="Diseñador 2">
-            <p>Diseñador 2</p>
-        </div>
+        <iframe src="https://online.fliphtml5.com/chyzd/qwjm/" frameborder="0"></iframe>
         `
 };
 
@@ -36,10 +41,11 @@ btnTendencias.addEventListener('click', () => (cambiarPagina('tendencias')));
 btnDiseniadores.addEventListener('click', () => (cambiarPagina('diseniadores')));
 
 function cambiarPagina(pagina) {
-    if (pagina == null) {
+    paginaElegida = pagina;
+    main.innerHTML = paginas[pagina];
+
+    if (paginaElegida == null) {
         main.innerHTML = paginas.main;
-    } else {
-        main.innerHTML = paginas[pagina];
     }
 }
 
